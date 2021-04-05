@@ -1,0 +1,5 @@
+server:
+{% for zone in zones %}
+  local-zone: "{{ zone['zonename'] }}" static
+  local-data: "{{ zone['zonename'] }} A 95.167.13.50"
+{% endfor %}

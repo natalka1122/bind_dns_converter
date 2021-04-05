@@ -1,0 +1,4 @@
+server:
+{% for zone in zones %}
+  local-zone: "{{ zone['zonename'] }}" always_refuse
+{% endfor %}

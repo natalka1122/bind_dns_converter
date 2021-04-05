@@ -1,0 +1,7 @@
+{% for zone in zones %}
+zone:
+  name: {{ zone['zonename'] }}
+  zonefile: zones/{{ zone['zonefile'] }}
+  allow-notify: 172.31.101.52 NOKEY 
+  request-xfr: AXFR 172.31.101.52 NOKEY
+{% endfor %}

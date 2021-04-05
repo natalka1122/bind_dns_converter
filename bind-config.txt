@@ -1,0 +1,34 @@
+	zone "ttc.ryazan.ru" {
+		type slave;
+		file "/var/lib/bind/ttc.ryazan.ru";
+		masters {
+			212.26.227.57 ;
+		};
+	};
+	zone "rspu.ryazan.ru" {
+		type slave;
+		file "/var/lib/bind/rspu.ryazan.ru";
+		masters {
+			212.26.227.57 ;
+		};
+	};
+	zone "rsu.ryazan.ru" {
+		type slave;
+		file "/var/lib/bind/rsu.ryazan.ru";
+		masters {
+			212.26.227.57 ;
+			1.1.1.1 ;
+		};
+	};
+	zone "wpad.domain.name" {
+		type masterqq;
+		file "/etc/bind/db.empty";
+	};
+	zone "arkhamnetwork.com" {
+		type master;
+		file "/etc/bind/db.empty";
+	};
+	zone "arkhamnetwork.org" {
+		type master;
+		file "/etc/bind/db.empty";
+	};

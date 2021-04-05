@@ -1,0 +1,5 @@
+{% for zone in zones %}
+zone:
+  name: {{ zone['zonename'] }}
+  zonefile: zones/{{ zone['zonefile'] }}
+{% endfor %}

@@ -1,0 +1,12 @@
+Value Required Zonename (.+)
+Value Required Type ([\w]+) 
+Value Required File (.+)
+Value List MasterIP ([\.\d]+)
+
+Start
+  ^\s+zone\s+\"${Zonename}\" 
+  ^\s+type\s+${Type};
+  ^\s+file\s+\"${File}\";
+  ^\s+master\s+{
+  ^\s+${MasterIP} ;
+  ^\s+\}; -> Record

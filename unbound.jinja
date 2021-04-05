@@ -1,0 +1,7 @@
+{% for zone in zones %}
+stub-zone:
+  name: "{{ zone['zonename'] }}"
+  stub-host: nsd1.ryazan.ru.
+  stub-host: nsd2.ryazan.ru.
+  stub-prime: yes
+{% endfor %}
